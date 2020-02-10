@@ -77,14 +77,25 @@
     <script src='./src/js/example-smart-app.js'></script>
 
     <!-- FHIR Client JS Library -->
-    <script src='./lib/js/fhir-client-v0.1.12.js'></script>
+    <script src="./node_modules/fhirclient/build/fhir-client.js"></script>
+
 
     <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
-    <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
+    <!-- <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
       $('#loading').hide();
+      // const client = new FHIR.client("https://r3.smarthealthit.org");
+      // client.request("Patient/2e27c71e-30c8-4ceb-8c1c-5641e066c0a4");
+
+      // const smart = FHIR.oauth2;
+      // smart.authorize({
+      //   iss: "https://fhir-ehr.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca",
+      //   clientId: '691ceb33-ba73-43f6-8e4e-f7f3043a0bb3',
+      //   scope:  'online_access openid profile',
+      //   redirectUri: 'https://airic37.github.io/smart-on-fhir-tutorial/example-smart-app/'
+      // });
 
       /*extractData().then(
         //Display Patient Demographics and Observations if extractData was success
